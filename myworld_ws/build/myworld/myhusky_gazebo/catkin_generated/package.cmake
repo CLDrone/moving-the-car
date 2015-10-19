@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "myhusky_gazebo")
+set(myhusky_gazebo_MAINTAINER "robot <robot@todo.todo>")
+set(myhusky_gazebo_DEPRECATED "")
+set(myhusky_gazebo_VERSION "0.0.0")
+set(myhusky_gazebo_BUILD_DEPENDS )
+set(myhusky_gazebo_RUN_DEPENDS )
+set(myhusky_gazebo_BUILDTOOL_DEPENDS "catkin")

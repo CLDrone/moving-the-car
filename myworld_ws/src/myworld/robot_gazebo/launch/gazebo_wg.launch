@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<launch>
+<!--  <include file="$(find gazebo_ros)/launch/willowgarage_world.launch">
+  </include> -->
+
+  <arg name="paused" default="false"/>  <!--should be true?-->
+  <arg name="use_sim_time" default="false"/>
+  <arg name="gui" default="true"/>
+  <arg name="headless" default="false"/>
+  <arg name="debug" default="false"/>  <!-- if not false, will get gdb problems -->
+<!--  <arg name="ground_truth" default="true"/> -->
+
+
+  <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
+   <include file="$(find gazebo_ros)/launch/empty_world.launch"> 
+    <arg name="world_name" value="$(find robot_gazebo)/worlds/robot_mbzirc.world"/>
+    <arg name="debug" value="$(arg debug)" />
+    <arg name="gui" value="$(arg gui)" />
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+    <arg name="headless" value="$(arg headless)"/>
+<!--    <arg name="use_ground_truth" value="$(arg ground_truth)"/> -->
+  </include>
+
+
+  <!-- Load the URDF into the ROS Parameter Server -->
+  <param name="robot_description"
+         command="$(find xacro)/xacro.py '$(find robot_description)/urdf/robot1_base_04.xacro'" />
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+  
+<!--  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" /> --> <!--use gui by default?-->
+
+  <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
+   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+        args="-urdf -model robot1 -param robot_description -Y 0.785 -z  0.05"/>  <!--节约测试时间-->
+
+</launch>

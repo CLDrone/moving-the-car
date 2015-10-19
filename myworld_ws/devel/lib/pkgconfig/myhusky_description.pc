@@ -1,0 +1,8 @@
+prefix=/home/robot/myworld_ws/devel
+
+Name: myhusky_description
+Description: Description of myhusky_description
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/robot/myworld_ws/devel/lib 
+Requires: 

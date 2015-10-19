@@ -1,0 +1,8 @@
+prefix=/home/robot/myworld_ws/install
+
+Name: myhusky_control
+Description: Description of myhusky_control
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/robot/myworld_ws/install/lib 
+Requires: 

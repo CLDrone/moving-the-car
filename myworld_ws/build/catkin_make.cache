@@ -1,0 +1,2 @@
+myworld/myhusky_control:myworld/myhusky_description:myworld/myhusky_gazebo:myworld/myworld_meta:myworld/robot_description:myworld/robot_gazebo
+-DCATKIN_DEVEL_PREFIX=/home/robot/myworld_ws/devel -DCMAKE_INSTALL_PREFIX=/home/robot/myworld_ws/install -G Unix Makefiles

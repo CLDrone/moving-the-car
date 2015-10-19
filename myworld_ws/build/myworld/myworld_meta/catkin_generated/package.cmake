@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "myworld_meta")
+set(myworld_meta_MAINTAINER "zx <zx@todo.todo>")
+set(myworld_meta_DEPRECATED "")
+set(myworld_meta_VERSION "0.0.0")
+set(myworld_meta_BUILD_DEPENDS )
+set(myworld_meta_RUN_DEPENDS )
+set(myworld_meta_BUILDTOOL_DEPENDS "catkin")

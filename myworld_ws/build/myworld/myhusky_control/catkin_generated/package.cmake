@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "myhusky_control")
+set(myhusky_control_MAINTAINER "robot <robot@todo.todo>")
+set(myhusky_control_DEPRECATED "")
+set(myhusky_control_VERSION "0.0.0")
+set(myhusky_control_BUILD_DEPENDS )
+set(myhusky_control_RUN_DEPENDS )
+set(myhusky_control_BUILDTOOL_DEPENDS "catkin")

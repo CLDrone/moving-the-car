@@ -1,0 +1,5 @@
+car_cmd_vel_pub uses the transformation relationship between base_footprint and odom to control the moving of the car. The codes publish cmd_vel.
+
+car_cmd_vel_pub_odom subscribes the /gazebo/modelStates topic and resolves out the state of the car, then publish cmd_vel
+
+there is another code that set the model state of car in gazebo by publishing the set_model_state topic, but it works not good, so I have not uploaded it here.
